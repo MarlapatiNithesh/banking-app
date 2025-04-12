@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-};
-
-export default nextConfig;
+    // your existing config goes here
+  };
+  
+  export default nextConfig;
+  

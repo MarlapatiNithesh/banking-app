@@ -5,14 +5,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { sidebarLinks } from "@/constants";
+import Footer from "./Footer";
 
-const MobileNavPannel = forwardRef(function MobileNavPannel({ className,onLinkClick }, ref) {
+const MobileNavPannel = forwardRef(function MobileNavPannel({ className,onLinkClick,user }, ref) {
   const pathname = usePathname();
 
   return (
     <div
       ref={ref}
-      className={`fixed top-0 left-0 z-50 h-screen w-[264px] border-none bg-white transition-transform duration-300 ease-in-out ${className}`}
+      className={`fixed pl-3 top-0 left-0 flex flex-col justify-between z-50 h-screen w-[264px] border-none bg-white transition-transform duration-300 ease-in-out ${className}`}
     >
       <nav className="flex flex-col gap-6 p-4">
         {/* Logo */}
@@ -62,7 +63,7 @@ const MobileNavPannel = forwardRef(function MobileNavPannel({ className,onLinkCl
         })}
         USER
       </nav>
-      FOOTER
+      <Footer user={user} type="mobile" />
     </div>
   );
 });

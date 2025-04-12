@@ -45,7 +45,8 @@
 
 @layer utilities {
   .input-class {
-    @apply text-16 placeholder:text-16 rounded-lg border border-gray-300 text-gray-900 placeholder:text-gray-500;
+    @apply border border-gray-300 focus:ring-2 focus:ring-gray-300 focus:border-gray-300 focus:outline-none rounded-lg text-base placeholder:text-base text-gray-900 placeholder:text-gray-500 px-4 py-2;
+
   }
 
   .sheet-content button {
@@ -340,7 +341,7 @@
   }
 
   .footer_name {
-    @apply flex size-10 items-center justify-center rounded-full bg-gray-200 max-xl:hidden;
+    @apply flex size-10 flex-shrink-0 items-center justify-center rounded-full bg-gray-200 max-xl:hidden;
   }
 
   .footer_email {
@@ -352,15 +353,15 @@
   }
 
   .footer_email-mobile {
-    @apply flex flex-1 flex-col justify-center;
+    @apply flex flex-1 flex-col overflow-auto justify-center;
   }
 
   .footer_image {
-    @apply relative size-5 max-xl:w-full max-xl:flex max-xl:justify-center max-xl:items-center;
+    @apply relative flex-shrink-0 size-5 max-xl:w-full max-xl:flex max-xl:justify-center max-xl:items-center;
   }
 
   .footer_image-mobile {
-    @apply relative size-5;
+    @apply fixed bottom-11 left-60 size-5;
   }
 
   /* Sidebar */

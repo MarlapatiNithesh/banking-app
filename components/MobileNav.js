@@ -6,7 +6,7 @@ import gsap from "gsap";
 import Image from "next/image";
 import MobileNavPannel from "./MobileNavPannel";
 
-const MobileNav = () => {
+const MobileNav = ({user}) => {
   const [isOpen, setIsOpen] = useState(false);
   const panelRef = useRef(null);
 
@@ -39,6 +39,7 @@ const MobileNav = () => {
       </button>
 
       <MobileNavPannel
+        user={user}
         ref={panelRef}
         onLinkClick={() => setIsOpen(false)}
         className="fixed top-0 left-0 h-screen w-[264px] bg-white -translate-x-full invisible z-50"
